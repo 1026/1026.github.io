@@ -417,7 +417,7 @@ RotateFrame.prototype.settingFrame = function(){
 
 
 function getPage(event, page) {
-  return event.changedTouches ? event.changedTouches[0][page] : event[page];
+  return event.originalEvent.changedTouches ? event.originalEvent.changedTouches[0][page] : event[page];
 }
 
 
